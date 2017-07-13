@@ -6,12 +6,11 @@ LD = gcc
 LDFLAGS = -Wall
 
 SIZE = size
-OBJCOPY = objcopy
 
 #
 # Local sources
 #
-OBJECTS = main.o hello.o
+OBJECTS = main.o hello.o name.o
 
 # For legacy
 #CFLAGS += -DORIGINAL_USB_PROTOCOL
