@@ -1,1 +1,1 @@
-void input_name();
+int input_name();
