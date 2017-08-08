@@ -24,7 +24,7 @@ int input_name() {
         name[strlen (name) - 1] = '\0';
 
     /* Say hello. */
-    printf("Hello %s. Nice to meet you.\n", name);
+    printf("Hello %s.\n", name);
 
     /* Free memory and exit. */
     free (name);
