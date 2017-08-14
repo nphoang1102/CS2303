@@ -10,11 +10,7 @@ SIZE = size
 #
 # Local sources
 #
-OBJECTS = main.o
-
-# For legacy
-#CFLAGS += -DORIGINAL_USB_PROTOCOL
-#OBJECTS += uart_orig.o report.o
+OBJECTS = main.o input.o
 
 #
 # Core make target
