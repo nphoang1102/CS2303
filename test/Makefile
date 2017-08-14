@@ -12,9 +12,6 @@ SIZE = size
 #
 OBJECTS = main.o hello.o name.o
 
-# For legacy
-#CFLAGS += -DORIGINAL_USB_PROTOCOL
-#OBJECTS += uart_orig.o report.o
 
 #
 # Core make target
