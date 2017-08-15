@@ -1,13 +1,3 @@
-/* The reference year and the day that year starts on */
-int comp_ref_year;
-int comp_ref_day;
-/* Sun: 0,
-   Mon: 1,
-   Tue: 2,
-   Wed: 3,
-   Thu: 4,
-   Fri: 5,
-   Sat: 6 */
-
 /* Function calls */
-int comp_start_day(int user_input);
+int comp_start_day(int user_input, int ref_day, int ref_year);
+int comp_is_year_leap(int year);
