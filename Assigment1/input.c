@@ -4,18 +4,18 @@
 unsigned int prompt_input() {
 
     /* Setup variables, screen and prompt user */
-    unsigned int input_month = 0;
-    printf("                      MONTHLY CALENDAR\n");
+    unsigned int input_year = 0;
+    printf("              MONTHLY CALENDAR\n");
     printf("Please enter year for this calender: ");
-    scanf("%d", &input_month);
+    scanf("%d", &input_year);
 
-    /* Nagging for correct input */
-    while (input_month == 0) {
+    /* Nagging for correct input and bound */
+    while (input_year == 0) {
         printf("Invalid input. Please try again: ");
-        scanf("%d", &input_month);
+        scanf("%d", &input_year);
+        input_year &= 0xfff;
     }
 
-    /* Bound and return user input value */
-    input_month &= 0xfff;
-    return input_month;
+    /* Return user input value */
+    return input_year;
 }

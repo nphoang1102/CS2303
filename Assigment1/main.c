@@ -5,8 +5,8 @@
 int main() {
 
     /* First thing first, get user's input */
-    unsigned int input_month = prompt_input();
-    printf("Your input month is %u\n", input_month);
+    unsigned int input_year = prompt_input();
+    printf("Your input year is %u\n", input_year);
 
     /* Finished and terminate */
     return 0;
