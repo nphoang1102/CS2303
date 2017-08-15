@@ -10,7 +10,7 @@ SIZE = size
 #
 # Local sources
 #
-OBJECTS = main.o input.o
+OBJECTS = main.o input.o compute.o
 
 #
 # Core make target
