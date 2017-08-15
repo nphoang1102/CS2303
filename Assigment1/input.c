@@ -1,3 +1,10 @@
+/* Module for taking user input
+ *
+ * Author: Hoang Nguyen
+ *
+ */
+
+/* Libraries */
 #include <stdio.h>
 #include "input.h"
 

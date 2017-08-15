@@ -1,3 +1,10 @@
+/* Module for computation
+ *
+ * Author: Hoang Nguyen
+ *
+ */
+
+/* Libraries */
 #include <stdio.h>
 #include "compute.h"
 
@@ -9,13 +16,14 @@ int comp_start_day(int user_input) {
 
     // Looping through the years
     for (int i = comp_ref_year; i < user_input; i++) {
-        // For every non-leap year, the start day is increased by 1
-        if (i % 4) start_day += 1;
 
-        // Increased by 2 for leap year
-        else start_day += 2;
+        // For every non-leap year, the start day is increased by 1, 2 for leap year
+        if ((i % 400) == 0) start_day += 2;
+        else if ((i % 100) == 0) start_day += 1;
+        else if ((i % 4) == 0) start_day += 2;
+        else start_day += 1;
 
-        // Increased for 1 week, restart
+        // Passed 1 week, restart
         if (start_day > 6) start_day -= 7;
     }
 
@@ -23,4 +31,5 @@ int comp_start_day(int user_input) {
     return start_day;
 }
 
-/* Something wrong from 1700 to 1800 */
+/* Verify for work by back reference here 
+https://www.timeanddate.com/calendar/?year=2017&country=22 */

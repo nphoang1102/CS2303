@@ -1,4 +1,4 @@
-/* Got from gcc cal's function, starting year, day 1/1 falls on Saturday */
+/* The reference year and the day that year starts on */
 int comp_ref_year;
 int comp_ref_day;
 /* Sun: 0,

@@ -1,3 +1,8 @@
+# Make file, can't list source
+#
+# Author: Hoang Nguyen
+#
+#
 
 CC = gcc
 CFLAGS = -Os -std=gnu99 -g

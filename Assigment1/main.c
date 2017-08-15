@@ -1,10 +1,18 @@
+/* Main module, self explanatory
+ *
+ * Author: Hoang Nguyen
+ *
+ */
+
+/* Libraries */
 #include <stdio.h>
 #include "input.h"
 #include "compute.h"
 
-/* Setup some global variables here */
+/* Setup some global variables here, reference from
+https://www.timeanddate.com/calendar/?year=2017&country=22 */
 comp_ref_year = 1;
-comp_ref_day = 6;
+comp_ref_day = 1;
 
 
 /* Main function for execution */
