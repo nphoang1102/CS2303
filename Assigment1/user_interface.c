@@ -38,7 +38,7 @@ int ui_display_month(int month, int start_day, int isLeap) {
             days = 31;
             break;
         case 2:
-            printf("      Febuary\n");
+            printf("      February\n");
             if (isLeap) days = 29;
             else days = 28;
             break;
