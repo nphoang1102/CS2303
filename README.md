@@ -8,4 +8,4 @@ Never had a chance to take this class, and it's already too late for me to take 
 Random testing stuff and most importantly verify my Makefile work.
 
 #### Assignment 1:
-Create a Gregorian version of the GNU's stock cal function. Beware of the September of 1752 of GNU's stock cal function.
+Create a Gregorian version of the GNU's stock cal function. Beware of September of 1752 of GNU's stock cal function.
