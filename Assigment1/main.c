@@ -25,25 +25,20 @@ int ref_day = 1;
 /* Main function for execution */
 int main() {
 
-    /* First thing first, get user's input, terminate if the user is stupid */
+    // First thing first, get user's input, terminate if the user is stupid
     unsigned int input_year = ui_input();
     if (input_year == 0) {
         printf("Invalid input, terminate.\n");
         return 0;
     }
 
-    /* Input looks good, proceed here */
-    printf("Your input year is %u\n", input_year);
+    // Input looks good, process here
     int start_day = comp_start_day(input_year, ref_day, ref_year);
     int is_leap = comp_is_year_leap(input_year);
-    printf("Calculated start day is %u\n", start_day);
-    if (is_leap) printf("Is a leap year\n");
-    else printf("Not a leap year\n");
-    for (int i = 1; i < 12; i++) {
-        ui_display_month(i);
-        printf("\n");        
-    }
 
-    /* Finished and terminate with no error */
+    // Display calendar to screen
+    ui_display_year(start_day, is_leap);
+
+    // Finished and terminate with no error
     return 1;
 }

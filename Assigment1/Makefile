@@ -36,5 +36,5 @@ main.bin: $(OBJECTS)
 #
 .PHONY: clean
 clean:
-	rm -rf *.o *~ *.bin *.elf
+	rm -rf *.o *~ *.bin
 
