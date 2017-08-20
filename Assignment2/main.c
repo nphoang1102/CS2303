@@ -10,7 +10,7 @@
 /* Where the magic happens */
 int main() {  
     // Storage variables
-    int x, y, gen;
+    unsigned int x, y, gen;
     char print, pause;
 
     // Prompt user input and check for errors
@@ -19,7 +19,10 @@ int main() {
         printf("Invalid input, terminate.\n");
         return 1;
     }
-    printf("Inputs are %d %d %d %c %c.\n", x, y, gen, print, pause);
+    printf("Inputs are %u %u %u %c %c.\n", x, y, gen, print, pause);
+
+    // Initialize our grid
+    char grid[x][y];
 
     // Terminate with error indication
     return 0;
