@@ -1,14 +1,27 @@
+/* Main module, self explanatory
+ *
+ * Author: Hoang Nguyen
+ *
+ */
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "user_input.h"
 
-int main() {
-    int integer = 0;
-    float floating_p = 0;
-    double double_p = 0;
-    char word = 0;
+/* Where the magic happens */
+int main() {  
+    // Storage variables
+    int x, y, gen;
+    char print, pause;
 
-    printf("The size of 1 integer is %d.\n", sizeof(integer));
-    printf("The size of 1 flotaing point is %d.\n", sizeof(floating_p));
-    printf("The size of 1 double precision number is %d.\n", sizeof(double_p));
-    printf("The size of 1 character is %d.\n", sizeof(word));
+    // Prompt user input and check for errors
+    char ui_check = ui_get_input(x, y, gen, print, pause);
+    if (ui_check) {
+        printf("Invalid input, terminate.\n");
+        return 1;
+    }
+
+
     return 0;
-}
+}   

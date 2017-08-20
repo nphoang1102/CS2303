@@ -15,7 +15,7 @@ SIZE = size
 #
 # Local sources
 #
-OBJECTS = main.o
+OBJECTS = main.o user_input.o
 
 #
 # Core make target
