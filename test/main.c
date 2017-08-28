@@ -16,8 +16,9 @@ int main() {
 
     // Print out the elements stored in our 2d array
     for(int i = 0; i < 4; i++){  
-        for(int j = 0; j < 6; j++){  
-            printf("arr[%d][%d] = %d ",i,j,arr[i][j]);  
+        for(int j = 0; j < 6; j++){ 
+            arr[i][j] = i * 6 + j; 
+            printf("%3d ", arr[i][j]);  
         }
         printf("\n");
     }
