@@ -12,7 +12,7 @@
 int main() {  
     // Storage variables
     unsigned int x, y, gen;
-    char print, pause, *grid;
+    char print, pause, **grid;
 
     // Prompt user input and check for errors
     char ui_check = ui_get_input(&x, &y, &gen, &print, &pause, grid);
@@ -21,12 +21,17 @@ int main() {
         return 1;
     }
     printf("Inputs are %u %u %u %c %c.\n", x, y, gen, print, pause);
-    printf("Our total grid size is %u.\n", sizeof(grid));
+    printf("Our total grid size is %u.\n", (x*y));
 
     // Initialize our grid
-    // char grid[x][y], init[x][y];
-    // ui_init_config(*init, x, y);
-    // ui_grid_plot(*grid, x, y);
+    // printf("%3d ", grid[0][0]); 
+    // for(int i = 0; i < x; i++){  
+    //     for(int j = 0; j < y; j++){ 
+    //         grid[i][j] = i * x + j;
+    //         printf("%2d ", (i * x + j));
+    //     }
+    //     printf("\n");
+    // }
 
     // Free up memory and terminate with no error indication
     free(grid);

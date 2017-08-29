@@ -9,7 +9,7 @@
 #include "user_input.h"
 
 /* Function to prompt and get input from the user */
-char ui_get_input(unsigned int *x, unsigned int *y, unsigned int *gen, char *print, char *pause, char *grid) {
+char ui_get_input(unsigned int *x, unsigned int *y, unsigned int *gen, char *print, char *pause, char **grid) {
     // Storage variables
     char input[MAX_SIZE];
 
@@ -25,8 +25,18 @@ char ui_get_input(unsigned int *x, unsigned int *y, unsigned int *gen, char *pri
     if ((*print != 'n') && (*print != 'y')) *print = 'n';
     if ((*pause != 'n') && (*pause != 'y')) *pause = 'n';
 
-    // Return no error indicator, allocate memory for grid and terminate
-    grid = malloc((*x) * (*y) * sizeof(char));
+    // Proceed to allocate memory for our 2d x-by-y array
+    printf("We have a %d-by-%d matrix.\n", *x, *y);
+    malloc(sizeof(*grid) * (*x));
+    if (grid) {
+        for (int i = 0; i < (*x); i++) {
+            grid[i]= malloc(sizeof(**grid) * (*y));
+        }
+        grid[0][0] = 0;
+    }
+    printf("%d", grid[0][0]);
+
+    // Return no error indicator
     return 0;
 }
 
